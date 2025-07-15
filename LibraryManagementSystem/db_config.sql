@@ -1,0 +1,15 @@
+CREATE DATABASE LibraryDB;
+USE LibraryDB;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    role ENUM('Admin', 'Student') NOT NULL
+);
+
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    isIssued BOOLEAN DEFAULT FALSE
+);
